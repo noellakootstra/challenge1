@@ -1,0 +1,133 @@
+html {
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #222222;
+	color: #FFFFFF;
+  font-family: 'Asap Condensed', verdana, sans-serif;
+    text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+    max-width: 100px;
+    padding: 0.4em;
+    border-radius: 0.2em;
+
+}
+
+.grid-container > div {
+  padding: 0.2em 1em;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+
+  grid-template-areas: 
+        "brandstof"
+        "snelheid"
+        "eten"
+        "drinken"
+        "gforce"
+        "temperatuur"; 
+}
+
+.box1{
+    grid-area: brandstof;
+} 
+
+.box2{
+    grid-area: snelheid;
+    background-color: #93CBCB;
+}
+
+.box3 {
+  grid-area: eten;
+}
+
+.box4 {
+  grid-area: drinken;
+}
+
+.box5 {
+    grid-area: gforce;
+    background-color: #93CBCB;
+}
+
+.box6 {
+  grid-area: temperatuur;
+}
+
+/*ringchart*/
+
+
+/************Mid**************/
+@media only screen and (min-width: 401px) and (max-width: 599px) {
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 600px;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+        "brandstof"
+        "snelheid"
+        "eten"
+        "drinken"
+        "gforce"
+        "temperatuur"; 
+  }   
+}
+
+/***********Large*************/
+@media only screen and (min-width: 600px) and (max-width: 959px){
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 600px;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+        "brandstof brandstof"
+        "snelheid snelheid"
+        "eten drinken"
+        "gforce gforce"
+        "temperatuur temperatuur"; 
+  }
+}
+
+
+/************XL**************/
+@media only screen and (min-width: 960px) {
+  .grid-container{
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 600px;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+        "brandstof snelheid temperatuur"
+        "eten drinken gforce";
+  }
+
+    .box3{
+        background-color: #93CBCB;
+    }
+}
+
+
+
