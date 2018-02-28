@@ -12,17 +12,25 @@
 	  <div class="grid-container">
 	    <div class="grid-item box1"><h2>Brandstof</h2></div>
 	    <div class="grid-item box2"><h2>Snelheid</h2>
-          
-          </div>
-	    <div class="grid-item box3"><h2>Voorraden</h2>
+            <div class="wrapper">
+                <div class="speedometer">
+                    <div class="pointer"></div>
+                </div>
+            </div>
+        </div>
+	    <div class="grid-item box3"><h2>Water</h2>
             <canvas id="myChart"></canvas>
         </div>
-	    <div class="grid-item box4"><h2>Voorraden</h2>
+	    <div class="grid-item box4"><h2>Eten</h2>
             <canvas id="myChart2"></canvas>
         </div>
-	    <div class="grid-item box5"><h2>G-force</h2></div>
+	    <div class="grid-item box5"><h2>G-force</h2>
+            <p id="gforce"></p>
+        </div>
 	    <div class="grid-item box6"><h2>Temperatuur</h2></div>
 	  </div>
-	  <script type="text/javascript" src="scripts/main.js"></script>
+        <script type="text/javascript" src="scripts/gforce.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+        <script type="text/javascript" scr="scripts/brandstof.js"></script>
 	</body>
 </html>
