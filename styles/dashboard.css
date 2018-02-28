@@ -28,11 +28,11 @@ h2 {
 }
 
 .grid-container{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 10px;
-
-  grid-template-areas: 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: 
         "brandstof"
         "snelheid"
         "eten"
@@ -67,18 +67,20 @@ h2 {
   grid-area: temperatuur;
 }
 
-/*ringchart*/
-
+/*donutchart*/
+#myChart {
+    width: 50%;
+    align-content: center;
+}
 
 /************Mid**************/
 @media only screen and (min-width: 401px) and (max-width: 599px) {
   .grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     height: 600px;
     grid-gap: 10px;
-
     grid-template-areas: 
         "brandstof"
         "snelheid"
