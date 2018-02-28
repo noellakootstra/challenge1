@@ -1,12 +1,17 @@
-html {
-	box-sizing: border-box;
+html, body {
+  height: 100%;
 }
 
 body{
+    box-sizing: border-box;
 	background-color: #222222;
 	color: #FFFFFF;
-  font-family: 'Asap Condensed', verdana, sans-serif;
+    font-family: 'Asap Condensed', verdana, sans-serif;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       
 }
 
 h1 {
@@ -72,7 +77,81 @@ h2 {
     width: 50%;
     align-content: center;
 }
+/*snelheidsmeter*/
 
+body {
+  background: #222;
+}
+
+.wrapper {
+  margin: 30px auto;
+  width: 200px;
+}
+.wrapper .speedometer {
+  width: 200px;
+  height: 100px;
+  background: #666;
+  -moz-border-radius: 200px 200px 0 0;
+  -webkit-border-radius: 200px;
+  border-radius: 200px 200px 0 0;
+  position: relative;
+}
+.wrapper .speedometer .pointer {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+.wrapper .speedometer .pointer:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 20px;
+  -moz-border-radius: 40px 40px 0 0;
+  -webkit-border-radius: 40px;
+  border-radius: 40px 40px 0 0;
+  background: #333;
+  position: absolute;
+  bottom: -10px;
+  left: -20px;
+}
+.wrapper .speedometer .pointer:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -5px;
+  bottom: 0px;
+  width: 10px;
+  height: 80px;
+  background: #600;
+  transform-origin: center 80px;
+  animation: roll 3s alternate infinite;
+}
+
+@keyframes roll {
+  from {
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+  to {
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+/*brandstof*/
+
+
+/*gforce*/
+
+.gforce, p {
+    font-size: 4em;
+}
 /************Mid**************/
 @media only screen and (min-width: 401px) and (max-width: 599px) {
   .grid-container{
