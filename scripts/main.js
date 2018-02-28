@@ -26,7 +26,7 @@ var chart = new Chart(ctx, {
     // The data for our dataset
     data: {
         datasets: [{
-            label: "My First dataset",
+            
             backgroundColor: ['#707070', '#FFFFFF'],
             borderColor: ['#707070', '#FFFFFF'],
             data: [70,30],
@@ -39,3 +39,24 @@ var chart = new Chart(ctx, {
 });
 
     
+//linechart
+
+var ctx = document.getElementById('myChart3').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"],
+        datasets: [{
+            label: "Gemeten Gforce",
+            backgroundColor: '#707070)',
+            borderColor: '#707070',
+            data: [0, 4, 3, 6, 9, 7, 3],
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
